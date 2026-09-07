@@ -1,0 +1,11 @@
+topic,required_action
+Prospective status,State that alpha was selected after same-cohort canonical-band exploration and that the focused analysis was not prospectively preregistered unless contrary documentation exists.
+Study-size rationale,State that n was determined by availability and complete cases; no retrospective power justification.
+Questionnaire scoring,"Verify exact STAI trait and MSPSS scoring manuals, language versions, allowed ranges and handling of missing items."
+Reliability,Item-level responses are not in the frozen model table; add sample reliability only if item-level data are audited.
+Funding,Add funding and role of funder for the present secondary analysis.
+Conflicts/roles,"Add conflicts of interest, author contributions and data-use compliance."
+Data sharing,Decide which participant-level table may be publicly shared under LEMON phenotyping terms.
+Target journal,"Confirm the final target journal and then apply only that journal's current author instructions, word limits and reference style."
+Generative AI declaration,Add the journal-required disclosure for any generative-AI assistance used in manuscript preparation; authors remain responsible for all content.
+Manuscript placement,"Insert final table/figure numbers, repository DOI, access date and journal-specific checklist page numbers."

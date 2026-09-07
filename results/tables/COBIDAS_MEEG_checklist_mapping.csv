@@ -1,0 +1,11 @@
+item,requirement,status,evidence_or_action
+Design,"Population, design, ethics, protocol",DOCUMENTED,Primary LEMON paper and local participant flow.
+Acquisition,"Device, electrodes, layout, reference, ground, impedance, sampling, filters",DOCUMENTED_SOURCE,BrainAmp MR plus; 61 scalp+VEOG; 10-10; FCz; sternum; <5 kOhm; 2500 Hz; 0.015-1000 Hz.
+Acquisition,Paradigm and timing,DOCUMENTED_SOURCE,16 interleaved 60-s blocks; 8 EC/8 EO; EC first; EO fixation.
+Preprocessing,Software and exact ordered operations,DOCUMENTED_LOCAL,The portable scripts/03_preprocess_eeg.py is included with participant QC summaries and an upstream-method audit report.
+Preprocessing,Bad channels and artifacts,DOCUMENTED_LOCAL,"Included source closes the 1.4826-MAD robust-z formula, six-neighbor rule, advisory LOF, ICA/ICLabel/EOG union, interpolation, and three hard exclusions."
+Spectral analysis,"Estimator, window, overlap, resolution, bands, units",DOCUMENTED_LOCAL,"Both the PSD/QC source and the authoritative portable spectral-input builder are included. The latter implements additive closed-endpoint trapezoidal integration/band width; periodogram/Hamming, 4 s, 50% overlap, 0.25-Hz FFT spacing and 0.34-Hz ENBW are documented."
+ROI,ROI definition independent of current coefficient map,DOCUMENTED_WITH_LIMITATION,Fixed anatomical posterior ROI of nine named sensors; distinguish it from the secondary sensor-wise maps.
+Statistics,"All regressors, software, assumptions, multiplicity",DOCUMENTED,"Full design, versions, HC3, diagnostics, focal Holm-2, post-selection Holm-8, sensor-wise BH-FDR and exact tests generated."
+Results,Effect size/CI/model fit/full results,DOCUMENTED,"Coefficients, 95% CIs, contrasts, R2/RMSE, diagnostics, curves and sensitivities generated."
+Sharing,Code/data provenance and machine-readable outputs,DOCUMENTED_LOCAL,"Four upstream source artifacts, original/public-copy hashes, scripts, CSV/TXT/JSON and figures are included; path sanitization and LEMON-permission boundary are explicit."

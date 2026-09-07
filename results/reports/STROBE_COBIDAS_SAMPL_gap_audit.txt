@@ -1,0 +1,14 @@
+
+REPORTING GAP AUDIT
+
+The generated mapping tables cover the information that can be verified from the frozen local project and the LEMON source publication. They do not certify journal compliance. Items requiring author verification are isolated in tables/HUMAN_INFORMATION_REQUIRED.csv.
+
+Upstream methods are directly inspectable in scripts/03_preprocess_eeg.py, scripts/04_compute_psd_qc.py, scripts/06_build_analysis_inputs.py, and the run-specific audit/metadata/source_audit_summary.json. Source-to-package hashes are checked during each run; historical byte hashes are enforced only when the optional archived-snapshot mode is requested. The initial PSD/QC summaries and the exact analysis-input constructor are separate documented stages. UPSTREAM_METHOD_SPECIFICATIONS_ES_EN.txt records the bad-channel, LOF, ICLabel/EOG, spectral-integration, and source-exclusion rules.
+
+Most important boundary: this is a secondary observational analysis and must not be described as prospectively preregistered unless documentation exists. Alpha was selected after same-cohort exploration of delta, theta, alpha, and beta; it was not a prespecified sole band. The focused alpha Holm adjustment covers the two focal psychometric total-association tests. Table S14 separately applies the exact final specification to four bands and controls eight band-by-scale total tests with Holm, with a separate Holm family for eight nonlinearity tests. Only alpha-MSPSS survives the total-test Holm-8 sensitivity; alpha-STAI does not. This contextual sensitivity is not a complete correction for all historical analytic choices. The secondary sensor-wise maps use BH-FDR separately across 61 electrodes for each psychometric variable and power representation.
+
+No retrospective power calculation is used. The study-size statement is availability-based: 139 participants passed the frozen EEG pipeline, and 137 had complete STAI, MSPSS, sex and partnership status.
+
+Item-level STAI/MSPSS data are not part of the analytic table. Exact questionnaire version/scoring and sample reliability therefore require a separate audited item-level source before they can be reported.
+
+The participant-level CSV is intended for local validation. Do not publish it automatically; confirm LEMON behavioral-data terms and institutional requirements first. The public candidate removes local absolute paths from path-bearing upstream artifacts but intentionally retains pseudonymous dataset IDs in the preprocessing source; verify that release against LEMON terms.

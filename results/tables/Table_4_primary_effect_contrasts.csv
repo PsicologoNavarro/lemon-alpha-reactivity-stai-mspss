@@ -1,0 +1,3 @@
+variant,outcome,contrast,estimate_db,se_hc3,z_hc3,p_hc3_two_sided,ci95_hc3_low,ci95_hc3_high,power_ratio_of_reactivity_ratios,percent_difference_in_ec_eo_power_ratio,percent_ci95_low,percent_ci95_high
+primary_posterior_roi_spline,STAI_trait,predicted_at_+1SD_minus_predicted_at_-1SD,0.6440933242,0.7419670466,0.8680888553,0.3853456916,-0.8101353649,2.098322013,1.159870045,15.9870045,-17.01750976,62.11835985
+primary_posterior_roi_spline,MSPSS_total,predicted_at_+1SD_minus_predicted_at_-1SD,-0.2825299246,0.767143012,-0.368288468,0.7126581504,-1.786102599,1.22104275,0.9370160017,-6.298399827,-33.718895,32.46595505

@@ -1,0 +1,21 @@
+name: release-audit
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  metadata-privacy-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install citation validator
+        run: python -m pip install --disable-pip-version-check cffconvert==2.0.0
+      - name: Validate CITATION.cff
+        run: cffconvert --validate
+      - name: Enforce public-release boundary and manifest
+        run: python scripts/verify_repository.py --repository . --release

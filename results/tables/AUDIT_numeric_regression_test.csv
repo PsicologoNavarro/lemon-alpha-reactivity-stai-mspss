@@ -1,0 +1,7 @@
+outcome,statistic,observed,reference_value,absolute_difference,tolerance,pass
+STAI_trait,wald_total,10.47169792,10.471698,7.526787726e-08,5e-06,True
+STAI_trait,p_total,0.01495412061,0.014954,1.206129246e-07,5e-07,True
+STAI_trait,linear_component,0.4558617252,0.455862,2.747523387e-07,5e-07,True
+MSPSS_total,wald_total,14.89848936,14.898489,3.58510059e-07,5e-06,True
+MSPSS_total,p_total,0.001905483985,0.001905,4.839850334e-07,5e-07,True
+MSPSS_total,linear_component,-0.4327934308,-0.432793,4.308069335e-07,5e-07,True

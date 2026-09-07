@@ -1,0 +1,13 @@
+variant,outcome,term,vif
+primary_posterior_roi_spline,STAI_trait,stai_z_linear,1.17939011
+primary_posterior_roi_spline,STAI_trait,stai_z_nonlinear_1,1.010258691
+primary_posterior_roi_spline,STAI_trait,stai_z_nonlinear_2,1.049161516
+primary_posterior_roi_spline,STAI_trait,mspss_z_linear,1.230193123
+primary_posterior_roi_spline,STAI_trait,male_vs_female,1.0282542
+primary_posterior_roi_spline,STAI_trait,partnered_vs_not,1.081712035
+primary_posterior_roi_spline,MSPSS_total,mspss_z_linear,1.211569165
+primary_posterior_roi_spline,MSPSS_total,mspss_z_nonlinear_1,1.019769335
+primary_posterior_roi_spline,MSPSS_total,mspss_z_nonlinear_2,1.01637888
+primary_posterior_roi_spline,MSPSS_total,stai_z_linear,1.187868271
+primary_posterior_roi_spline,MSPSS_total,male_vs_female,1.015669377
+primary_posterior_roi_spline,MSPSS_total,partnered_vs_not,1.081337022

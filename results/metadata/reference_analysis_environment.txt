@@ -1,0 +1,11 @@
+generated=2026-09-06T19:14:43-06:00
+python=3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]
+executable=<local path omitted from public candidate>
+platform=Windows-11-10.0.26200-SP0
+numpy=2.2.6
+pandas=2.3.3
+scipy=1.13.0
+statsmodels=0.14.4
+patsy=1.0.1
+matplotlib=3.9.0
+mne=1.10.2

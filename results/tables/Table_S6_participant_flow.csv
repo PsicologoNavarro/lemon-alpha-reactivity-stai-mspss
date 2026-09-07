@@ -1,0 +1,5 @@
+stage,n,excluded_from_previous,reason
+Download-eligible source records,147,,Local source audit
+Complete EEG-demographic-questionnaire triplets,142,5,Five incomplete source triplets
+Frozen primary EEG cache,139,3,Three hard EEG exclusions documented upstream
+Complete cases for the focused analysis,137,2,Two missing relationship-status values

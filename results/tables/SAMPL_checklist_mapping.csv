@@ -1,0 +1,10 @@
+item,requirement,status,evidence_or_action
+Methods,Name methods and enough detail to reproduce,DOCUMENTED,"Natural spline construction, exact design matrices, HC3 and Holm are reported."
+Methods,"State alpha, two-sided tests and multiplicity",DOCUMENTED,Two-sided alpha=.05; focal Holm families of two plus contextual four-band Holm families of eight total and eight nonlinear tests.
+Methods,"State transformations, missing data and software",DOCUMENTED,"Sample z scores, complete-case rule, package versions and hashes reported."
+Methods,Assumptions and diagnostics,DOCUMENTED,Linearity relaxed by spline; HC3; residual/influence/collinearity diagnostics.
+Results,"Report estimates with uncertainty, not p alone",DOCUMENTED,All coefficients and +/-1 SD contrasts include 95% HC3 CIs.
+Results,"Exact test statistic, df and p",DOCUMENTED,"Wald chi-square, constraint df and exact p values reported."
+Results,Descriptive sample sizes and summaries,DOCUMENTED,"n per analysis, distributions and categorical counts reported."
+Results,Regression model specification and fit,DOCUMENTED,"Variables/coding, full coefficients, R2, adjusted R2 and RMSE supplied."
+Reporting,Avoid significance-only language,DOCUMENTED,"Narrative distinguishes association, curvature, uncertainty, post-selection band context and exploratory status."

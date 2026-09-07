@@ -1,0 +1,35 @@
+cff-version: "1.2.0"
+message: "If you use this software, cite the version-specific Zenodo DOI and the LEMON source study."
+title: "Reproducible analysis of trait anxiety, perceived social support, and posterior alpha reactivity in LEMON"
+type: software
+authors:
+  - family-names: "Navarro Nolasco"
+    given-names: "Diego Armando"
+    affiliation: "Doctorado en Investigaciones Cerebrales, Universidad Veracruzana, Xalapa-Enríquez, Veracruz, Mexico"
+    orcid: "https://orcid.org/0009-0006-1810-8206"
+  - family-names: "Beltrán-Parrazal"
+    given-names: "Luis"
+    affiliation: "Instituto de Investigaciones Cerebrales, Universidad Veracruzana, Xalapa-Enríquez, Veracruz, Mexico"
+    orcid: "https://orcid.org/0000-0002-4765-9051"
+  - family-names: "Martínez Chacón"
+    given-names: "Armando Jesús"
+    affiliation: "Instituto de Neuroetología, Universidad Veracruzana, Xalapa-Enríquez, Veracruz, Mexico"
+    orcid: "https://orcid.org/0000-0002-1248-2516"
+  - family-names: "López-Meraz"
+    given-names: "María Leonor"
+    affiliation: "Instituto de Investigaciones Cerebrales, Universidad Veracruzana, Xalapa-Enríquez, Veracruz, Mexico"
+    orcid: "https://orcid.org/0000-0003-0179-989X"
+  - family-names: "Morgado-Valle"
+    given-names: "Consuelo"
+    affiliation: "Instituto de Investigaciones Cerebrales, Universidad Veracruzana, Xalapa-Enríquez, Veracruz, Mexico"
+    orcid: "https://orcid.org/0000-0003-0158-7096"
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/PsicologoNavarro/lemon-alpha-reactivity-stai-mspss"
+keywords:
+  - EEG
+  - resting state
+  - alpha reactivity
+  - trait anxiety
+  - perceived social support
+  - LEMON

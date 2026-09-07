@@ -1,0 +1,10 @@
+
+REPRODUCIBILITY NOTES
+
+1. This is a secondary, exploratory, cross-sectional participant-level EEG study.
+2. Two natural-spline analyses use HC3 covariance, Holm correction across the two focal alpha tests, and adjustment for the other psychometric scale, sex, and partnership status.
+3. MSPSS is more robust than STAI in strict EEG-QC sensitivities; this does not prove a larger MSPSS effect.
+4. Figure 2 color encodes the directional linear component while stars encode the total 3-df spline test. No sensor-wise linear or nonlinear component survives BH-FDR.
+5. Alpha is a same-cohort, data-informed post hoc focus. The harmonized Holm-8 four-band sensitivity leaves only alpha-MSPSS significant.
+6. Input files are structurally checked and the aggregate model estimates are regression-tested. Archived byte hashes are optional because portable paths, timestamps and compressed serialization can change without changing the analysis.
+7. The repository-level pipeline contains the complete download, source-audit, preprocessing, PSD/QC, QC-freeze, spectral-input and final-analysis code. No raw data or participant-level tables are intended for public release.

@@ -1,0 +1,14 @@
+item,requirement,status,evidence_or_action
+1,Title/abstract identifies design,PENDING_MANUSCRIPT,Use 'cross-sectional secondary analysis' in title or abstract.
+2-3,Background and study objectives,PARTIAL,"Scientific rationale and focused objectives are drafted; alpha is disclosed as a same-cohort, data-informed post hoc focus and must not be presented as prospectively selected."
+4-5,"Design, setting, dates",DOCUMENTED,"LEMON cross-sectional acquisition in Leipzig, 2013-2015; secondary analysis date is logged."
+6,"Eligibility, selection and follow-up",DOCUMENTED,Source recruitment/eligibility plus local flow table and hard exclusions.
+7-8,Variables and measurement,DOCUMENTED,"Outcome, exposures, covariates, ROI, PSD units and reactivity formula are explicit."
+9,Bias,PARTIAL,"QC, influence and four-band selection sensitivities are supplied; data-informed band selection and residual-confounding limitations must remain."
+10,Study size,DOCUMENTED_LIMITATION,Availability sample; no prospective power calculation. Do not claim otherwise.
+11-12,Quantitative variables/statistical methods,DOCUMENTED,"Z scoring, spline df, HC3, the focal Holm-2 family, post-selection four-band Holm-8 sensitivity, complete cases, age/QC sensitivities and LOO are explicit."
+13,Participant flow,DOCUMENTED,CSV and 600-dpi flow figure generated.
+14,Descriptive data and missingness,DOCUMENTED,Table 1 and missingness table generated.
+15-17,"Outcome, main and additional results",DOCUMENTED,"Full coefficients, Wald tests, CIs, model fit, contrasts, four-band selection context and other sensitivities generated."
+18-21,"Key results, limitations, interpretation, generalisability",PARTIAL,Draft supplied; journal manuscript must retain exploratory and associative framing.
+22,Funding,PENDING_AUTHORS,Add funding/role of funder for this secondary analysis and cite source-study funding.

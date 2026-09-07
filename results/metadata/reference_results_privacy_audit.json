@@ -1,0 +1,11 @@
+{
+  "generated": "2026-09-06T19:14:44-06:00",
+  "status": "PASS",
+  "participant_level_measurement_tables_excluded_check": "PASS",
+  "preprocessing_and_initial_psd_byte_identical_check": "PASS",
+  "path_bearing_upstream_files_sanitized_check": "PASS",
+  "source_and_public_hashes_recorded_check": "PASS",
+  "local_user_path_scan_check": "PASS",
+  "local_user_path_leaks": [],
+  "note": "Pseudonymous LEMON dataset IDs remain in the preprocessing source for methods and exclusion audit; publication still requires permission review."
+}

@@ -1,0 +1,39 @@
+
+BAND-SELECTION RATIONALE AND FOUR-BAND SENSITIVITY
+JUSTIFICACION DE LA SELECCION DE BANDA Y SENSIBILIDAD DE CUATRO BANDAS
+
+STATUS / ESTATUS
+Alpha was not prespecified as the only eligible frequency band. The alpha focus was selected after exploratory examination of delta (1-4 Hz), theta (4-8 Hz), alpha (8-13 Hz), and beta (13-30 Hz) in this same cohort. The focused alpha analyses are therefore post hoc and exploratory even though the two-exposure family uses Holm adjustment.
+
+Alfa no fue preespecificada como la unica banda elegible. El foco alfa se selecciono despues de examinar exploratoriamente delta (1-4 Hz), theta (4-8 Hz), alfa (8-13 Hz) y beta (13-30 Hz) en esta misma cohorte. Por ello, los analisis focales alfa son post hoc y exploratorios, aunque su familia interna de dos exposiciones use ajuste de Holm.
+
+SELECTION SEQUENCE / SECUENCIA DE SELECCION
+1. The frozen spectral pipeline calculated EO PSD, EC PSD, and EC-minus-EO reactivity for all 139 participants, 61 scalp channels, and all four canonical bands. Band limits were fixed before the focused spline analysis.
+2. Preliminary broad analyses examined global, spatial, and repeated-block representations. Alpha showed the clearest joint pattern for STAI and MSPSS. Some earlier block-level, global-61-channel specifications also produced MSPSS-by-condition terms in delta, theta, and beta. Those terms were not treated as equivalent final findings because they used a different estimand and a random-intercept-only repeated-block covariance structure.
+3. Subsequent participant-level canonical-band analyses did not retain corrected delta, theta, or beta reactivity associations. Alpha was carried forward as the biologically coherent and inferentially strongest candidate for the fixed posterior ROI.
+4. To make that data-informed choice auditable, the final participant-level specification was then applied without modification to each canonical band: the same nine-channel posterior ROI, natural spline with basis df=4, adjustment for the other psychometric scale, sex and partnership status, and HC3 covariance. Holm correction was applied jointly across the eight total tests (4 bands x 2 scales), with a separate Holm family for the eight nonlinearity tests.
+
+1. El flujo espectral congelado calculo PSD EO, PSD EC y reactividad EC menos EO para 139 participantes, 61 canales y las cuatro bandas canonicas. Los limites de banda estaban fijados antes del spline focal.
+2. Los analisis amplios preliminares examinaron representaciones globales, espaciales y por bloques repetidos. Alfa mostro el patron conjunto mas claro para STAI y MSPSS. Algunas especificaciones tempranas por bloques, con promedio global de 61 canales, tambien produjeron terminos MSPSS por condicion en delta, theta y beta. Esos terminos no se consideraron hallazgos finales equivalentes porque correspondian a otro estimando y a una estructura de covarianza por bloques con solo intercepto aleatorio.
+3. Los analisis canonicos posteriores a nivel de participante no conservaron asociaciones corregidas de reactividad delta, theta o beta. Alfa se mantuvo como candidata biologicamente coherente y con la evidencia inferencial mas clara para la ROI posterior fija.
+4. Para auditar esa seleccion informada por los datos, la especificacion final a nivel de participante se aplico sin cambios a cada banda canonica: la misma ROI posterior de nueve canales, spline natural con df de base=4, ajuste por la otra escala, sexo y situacion de pareja, y covarianza HC3. Holm se aplico conjuntamente a las ocho pruebas totales (4 bandas x 2 escalas), con otra familia Holm para las ocho pruebas de no linealidad.
+
+HARMONIZED RESULTS / RESULTADOS HOMOGENEOS
+ band psychometric_variable linear_component_db_per_sd wald_chi2_total p_total_raw p_total_holm_all_8  total_reject_holm_all_8_05 p_nonlinear_holm_all_8
+delta            STAI_trait                  -0.039459        0.869427    0.832799           1.000000                       False               1.000000
+delta           MSPSS_total                   0.174081        2.510516    0.473394           1.000000                       False               1.000000
+theta            STAI_trait                   0.007965        0.010580    0.999711           1.000000                       False               1.000000
+theta           MSPSS_total                   0.218707        3.841090    0.279143           1.000000                       False               1.000000
+alpha            STAI_trait                   0.455862       10.471698    0.014954           0.104679                       False               1.000000
+alpha           MSPSS_total                  -0.432793       14.898489    0.001905           0.015244                        True               1.000000
+ beta            STAI_trait                   0.073196        0.785917    0.852832           1.000000                       False               1.000000
+ beta           MSPSS_total                  -0.109477        3.896402    0.272870           1.000000                       False               1.000000
+
+INTERPRETATION / INTERPRETACION
+Only the alpha-MSPSS total association survived the eight-test Holm correction. Alpha-STAI did not survive correction across bands, and no delta, theta, or beta total association was significant. No nonlinearity test survived Holm across eight. Thus, the four-band sensitivity supports alpha specificity most clearly for MSPSS; the STAI-alpha result remains exploratory and sensitive to the multiplicity family.
+
+Unicamente la asociacion total alfa-MSPSS sobrevivio la correccion Holm de ocho pruebas. Alfa-STAI no sobrevivio la correccion entre bandas, y ninguna asociacion total delta, theta o beta fue significativa. Ninguna prueba de no linealidad sobrevivio Holm entre ocho. Por tanto, la sensibilidad de cuatro bandas respalda con mayor claridad la especificidad alfa para MSPSS; el resultado STAI-alfa permanece exploratorio y sensible a la familia de multiplicidad.
+
+This sensitivity is a transparent context analysis, not a complete selective-inference correction for every model, topography, or functional form inspected historically in the same cohort. Strong confirmation requires an independent sample or a prospectively specified analysis in data not used for band selection.
+
+Esta sensibilidad es un analisis contextual transparente, no una correccion completa de inferencia selectiva para cada modelo, topografia o forma funcional examinada historicamente en la misma cohorte. La confirmacion fuerte requiere una muestra independiente o un analisis especificado prospectivamente en datos no usados para seleccionar la banda.

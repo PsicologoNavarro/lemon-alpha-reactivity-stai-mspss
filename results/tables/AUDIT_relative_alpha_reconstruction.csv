@@ -1,0 +1,3 @@
+condition,maximum_absolute_error_db,tolerance_db,pass
+eyes_open,3.745093125e-11,1e-08,True
+eyes_closed,4.430766865e-11,1e-08,True

@@ -1,0 +1,11 @@
+
+DATA-SHARING BOUNDARY
+
+LOCAL ANALYSIS OUTPUT
+The analysis output contains participant-level rows required for local audit, including the complete-case table and leave-one-participant-out identifiers. Keep that output under the ignored work directory and never add it to a public repository.
+
+PUBLIC REPOSITORY
+The repository contains executable code, aggregate results, reports, figures and integrity metadata. It excludes raw/clean EEG, questionnaire rows, participant-level measurements, PSD caches, Parquet files and the oversized full-frequency table. The preprocessing code necessarily retains six public pseudonymous LEMON dataset IDs for documented recoveries/exclusions.
+
+REPRODUCTION POLICY
+Reproducers obtain LEMON independently and execute the repository pipeline. Fresh runs use structural, formula, within-run hash and aggregate numeric checks. Archived byte hashes can be requested explicitly but are not the default because paths, timestamps and compressed serialization vary across systems.

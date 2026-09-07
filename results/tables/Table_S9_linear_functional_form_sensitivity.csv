@@ -1,0 +1,3 @@
+variant,outcome,n_participants,estimate_db_per_sd,se_hc3,z_hc3,p_raw_two_sided,ci95_hc3_low,ci95_hc3_high,r_squared,adjusted_r_squared,rmse_db,p_holm_2,reject_holm_05,power_ratio_multiplier_per_sd,percent_change_in_ec_eo_ratio_per_sd
+linear_functional_form_sensitivity_not_primary,STAI_trait,137,0.4852297858,0.2480214521,1.956402487,0.05041775941,-0.0008833277424,0.9713428993,0.07069977865,0.04253916588,2.960077918,0.1008355188,False,1.118208988,11.82089876
+linear_functional_form_sensitivity_not_primary,MSPSS_total,137,-0.4713187413,0.2635352842,-1.788446441,0.0737040093,-0.9878384071,0.04520092449,0.07069977865,0.04253916588,2.960077918,0.1008355188,False,0.8971563304,-10.28436696

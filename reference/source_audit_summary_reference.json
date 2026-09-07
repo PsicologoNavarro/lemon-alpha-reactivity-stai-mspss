@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-09-02T18:11:02.600580+00:00",
+  "source_project": "<local LEMON source path omitted from public candidate>",
+  "download_eligible": 147,
+  "triplet_complete": 142,
+  "triplet_incomplete": 5,
+  "source_audit_pass": 136,
+  "source_audit_fail": 6,
+  "source_audit_recoverable": 3,
+  "source_expected_exclusions": 3,
+  "source_unexpected_failures": 0,
+  "processable_after_documented_normalization": 139,
+  "expected_channels_total": 62,
+  "expected_scalp_eeg": 61,
+  "auxiliary_eog": "VEOG",
+  "age_distribution": {
+    "20-25": 74,
+    "25-30": 57,
+    "30-35": 11
+  },
+  "source_bytes_hashed": 45804669184,
+  "source_gib_hashed": 42.65892243385315,
+  "files_hashed": 426,
+  "hash_algorithm": "SHA-256",
+  "inferential_unit": "participant",
+  "_public_release_provenance": {
+    "sanitization": "local source_project path replaced; legacy aggregate counts retained and documented disposition counts added from the executable audit contract",
+    "source_sha256_before_sanitization": "a60218aa50267577054b9bd939d52a6cc73c32a2fdee2f66ec9784d18a6ff9df"
+  }
+}

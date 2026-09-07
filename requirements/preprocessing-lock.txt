@@ -1,0 +1,11 @@
+# Reproducibility environment for Python 3.12 source processing and QC.
+numpy==2.2.6
+scipy==1.15.3
+pandas==2.2.3
+pyarrow==18.1.0
+mne==1.9.0
+mne-icalabel==0.7.0
+onnxruntime==1.20.1
+matplotlib==3.10.0
+scikit-learn==1.6.1
+joblib==1.4.2

@@ -1,0 +1,46 @@
+# Local environments and caches
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# The complete reproducibility work tree is generated locally and never tracked
+workdir/
+data/
+audit/
+preprocessing/
+features/
+analysis/
+outputs/
+logs/
+*.log
+*.partial
+*.part
+
+# Raw/derived electrophysiology and large analytical inputs
+*.bdf
+*.edf
+*.eeg
+*.vhdr
+*.vmrk
+*.fif
+*.set
+*.parquet
+*.npz
+*.csv.gz
+*.zip
+
+# Explicit participant-level or oversized artifacts
+LEMON_139_participantes_61_canales_88_intervalos_EO_EC_reactividad_STAI_MSPSS_JMP.csv
+Data_participant_level_complete_cases.csv
+Table_S4_leave_one_participant_out.csv
+
+# Local/editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/

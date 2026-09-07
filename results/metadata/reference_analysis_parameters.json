@@ -1,0 +1,202 @@
+{
+  "generated": "2026-09-06T19:14:43-06:00",
+  "analysis": "Exploratory associations of trait anxiety and perceived social support with posterior alpha reactivity during resting-state EEG",
+  "project": "<LEMON_PROJECT_ROOT>",
+  "output": "<OUTPUT_FOLDER>",
+  "inferential_unit": "participant",
+  "primary_n": 137,
+  "source_cache_n": 139,
+  "channels": 61,
+  "roi_channels": [
+    "P3",
+    "Pz",
+    "P4",
+    "PO3",
+    "POz",
+    "PO4",
+    "O1",
+    "Oz",
+    "O2"
+  ],
+  "band": {
+    "primary_focus": "alpha",
+    "low_hz": 8.0,
+    "high_hz": 13.0,
+    "selection_status": "data-informed post hoc selection after same-cohort canonical-band exploration"
+  },
+  "band_selection_sensitivity": {
+    "role": "contextual post-selection sensitivity; not primary",
+    "bands": [
+      {
+        "name": "delta",
+        "low_hz": 1.0,
+        "high_hz": 4.0
+      },
+      {
+        "name": "theta",
+        "low_hz": 4.0,
+        "high_hz": 8.0
+      },
+      {
+        "name": "alpha",
+        "low_hz": 8.0,
+        "high_hz": 13.0
+      },
+      {
+        "name": "beta",
+        "low_hz": 13.0,
+        "high_hz": 30.0
+      }
+    ],
+    "model": "exact final posterior-ROI natural-spline specification applied independently to each band",
+    "total_test_multiplicity": "Holm across 8 band-by-scale total-association tests",
+    "nonlinearity_multiplicity": "separate Holm correction across 8 band-by-scale nonlinearity tests",
+    "result": "only alpha-MSPSS survives Holm-8; alpha-STAI and every non-alpha total test do not",
+    "selective_inference_boundary": "does not correct every analytical representation or functional form examined in the same cohort"
+  },
+  "reactivity": "EC_dB_minus_EO_dB",
+  "spline": {
+    "primary_patsy_formula": "cr(x, df=4)-1",
+    "primary_nonlinear_rank": 2,
+    "svd_tolerance": "max(s)*1e-8",
+    "complexity_sensitivity_basis_df": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "complexity_references": [
+      "HC3 asymptotic chi-square",
+      "HC3 finite-sample F"
+    ],
+    "complexity_multiplicity": "Holm across STAI and MSPSS separately within each nominal basis df"
+  },
+  "covariates": [
+    "other psychometric scale (linear)",
+    "male indicator",
+    "partnered indicator"
+  ],
+  "covariance": "HC3",
+  "tests": "two-sided Wald chi-square",
+  "alpha": 0.05,
+  "multiplicity": {
+    "focused_alpha_primary": "Holm separately across 2 total tests and 2 nonlinear tests",
+    "post_selection_four_band_context": "Holm across 8 total tests and separately across 8 nonlinear tests",
+    "sensor_maps": "BH-FDR across 61 electrodes separately within each map"
+  },
+  "topographic_analysis": {
+    "role": "secondary spatial characterization",
+    "electrodes": 61,
+    "absolute_alpha": "8-13 Hz density in dB re 1 uV2/Hz",
+    "relative_alpha": "100 * integrated 8-13 Hz power / integrated 1-45 Hz power",
+    "relative_reactivity": "EC relative alpha minus EO relative alpha, percentage points",
+    "association_color": "directional linear component from the adjusted natural-spline analysis",
+    "sensor_inference": "BH-FDR across 61 total 3-df spline tests separately within each map",
+    "colormap": "viridis for unsigned EO/EC power; RdBu_r for symmetric zero-centered signed maps",
+    "sensor_display": "all 61 locations shown as small black dots; channel-name labels intentionally omitted",
+    "geometry": "standard_1005 projected with the MNE eeglab sphere; one enclosing radius used identically for head outline and interpolation mask"
+  },
+  "complete_case": true,
+  "data_sharing": {
+    "package_root": "local validation; includes participant-level rows",
+    "public_release_candidate": "excludes participant-level measurement rows and identifier-bearing leave-one-out output; exact preprocessing source retains three pseudonymous LEMON exclusion IDs",
+    "human_permission_check_required": true
+  },
+  "upstream_source_specifications": {
+    "copied_verbatim": true,
+    "authoritative_location_in_package": [
+      "scripts/03_preprocess_eeg.py",
+      "scripts/04_compute_psd_qc.py",
+      "audit/metadata/source_audit_summary.json",
+      "scripts/06_build_analysis_inputs.py"
+    ],
+    "inventory": {
+      "preprocessing_script": {
+        "project_relative_path": "scripts/03_preprocess_eeg.py",
+        "package_relative_path": "scripts/03_preprocess_eeg.py",
+        "bytes": 32171,
+        "sha256": "5912943eb13a49029dddf46787f8ebd74d6895d64489b4dde226b539498efe5d",
+        "copied_verbatim": true,
+        "role": "bad-channel detection, LOF advisory role, ICA/ICLabel rules, interpolation, and EEG exclusions",
+        "contains_pseudonymous_dataset_ids": true,
+        "contains_local_absolute_path": false
+      },
+      "psd_script": {
+        "project_relative_path": "scripts/04_compute_psd_qc.py",
+        "package_relative_path": "scripts/04_compute_psd_qc.py",
+        "bytes": 17963,
+        "sha256": "341d886ae5aebdd2dfac3a0d50b65f9a72a5361499041c3592edb50aed4b9a23",
+        "copied_verbatim": true,
+        "role": "window QC, density-scaled periodogram, frequency-bin edge rules, and band summaries",
+        "contains_pseudonymous_dataset_ids": false,
+        "contains_local_absolute_path": false
+      },
+      "source_audit": {
+        "project_relative_path": "audit/metadata/source_audit_summary.json",
+        "package_relative_path": "audit/metadata/source_audit_summary.json",
+        "bytes": 637,
+        "sha256": "a60218aa50267577054b9bd939d52a6cc73c32a2fdee2f66ec9784d18a6ff9df",
+        "copied_verbatim": true,
+        "role": "aggregate source-audit counts and source provenance",
+        "contains_pseudonymous_dataset_ids": false,
+        "contains_local_absolute_path": true
+      },
+      "canonical_cache_script": {
+        "project_relative_path": "scripts/06_build_analysis_inputs.py",
+        "package_relative_path": "scripts/06_build_analysis_inputs.py",
+        "bytes": 33431,
+        "sha256": "3eb80767884558b89a6e99bc5f26aa06eeafe21b902c7e644572a6852634960c",
+        "copied_verbatim": true,
+        "role": "portable constructor of the 1-45 Hz and canonical-band inputs consumed by the analysis",
+        "contains_pseudonymous_dataset_ids": false,
+        "contains_local_absolute_path": false
+      }
+    },
+    "execution_boundary": "included for direct methods audit; not rerun by the final statistical-analysis stage"
+  },
+  "archived_input_hash_check_enforced": false,
+  "skip_loo": false,
+  "input_hashes_sha256": {
+    "cache": "0dddda113481e1e009141510ccd1b4cd00d834aa619fa2d93bfc18eeed7315f4",
+    "spectral_metadata": "4979a83c9ef53c6fce9312956bf79c9fe7d8138012277ead0118d463528d6ee5",
+    "full_frequency_table": "5886245cc559f9cf89e85136cef2aa83f20274b7aef0ad4204d1de348194c5cb",
+    "qc": "3a06082b3fbc33fa03e1d61b4df5c92cccc55dc2a7461a669fb0df6c7f0736ed",
+    "source_audit": "a60218aa50267577054b9bd939d52a6cc73c32a2fdee2f66ec9784d18a6ff9df",
+    "preprocessing_script": "5912943eb13a49029dddf46787f8ebd74d6895d64489b4dde226b539498efe5d",
+    "psd_script": "341d886ae5aebdd2dfac3a0d50b65f9a72a5361499041c3592edb50aed4b9a23",
+    "canonical_cache_script": "3eb80767884558b89a6e99bc5f26aa06eeafe21b902c7e644572a6852634960c"
+  },
+  "public_release_sanitization": {
+    "local_paths_removed": true,
+    "upstream_sources": {
+      "preprocessing_script": {
+        "public_relative_path": "scripts/03_preprocess_eeg.py",
+        "source_sha256": "5912943eb13a49029dddf46787f8ebd74d6895d64489b4dde226b539498efe5d",
+        "public_sha256": "5912943eb13a49029dddf46787f8ebd74d6895d64489b4dde226b539498efe5d",
+        "copied_verbatim": true,
+        "sanitization": "none; byte-identical copy"
+      },
+      "psd_script": {
+        "public_relative_path": "scripts/04_compute_psd_qc.py",
+        "source_sha256": "341d886ae5aebdd2dfac3a0d50b65f9a72a5361499041c3592edb50aed4b9a23",
+        "public_sha256": "341d886ae5aebdd2dfac3a0d50b65f9a72a5361499041c3592edb50aed4b9a23",
+        "copied_verbatim": true,
+        "sanitization": "none; byte-identical copy"
+      },
+      "source_audit": {
+        "public_relative_path": "audit/metadata/source_audit_summary.json",
+        "source_sha256": "a60218aa50267577054b9bd939d52a6cc73c32a2fdee2f66ec9784d18a6ff9df",
+        "public_sha256": "51fdbdac836de44d6144467b44617dd0cf908c442dcbafd2a9e63e3cfbe1e215",
+        "copied_verbatim": false,
+        "sanitization": "local source_project path replaced; aggregate counts unchanged"
+      },
+      "canonical_cache_script": {
+        "public_relative_path": "scripts/06_build_analysis_inputs.py",
+        "source_sha256": "3eb80767884558b89a6e99bc5f26aa06eeafe21b902c7e644572a6852634960c",
+        "public_sha256": "3eb80767884558b89a6e99bc5f26aa06eeafe21b902c7e644572a6852634960c",
+        "copied_verbatim": true,
+        "sanitization": "none; byte-identical copy"
+      }
+    }
+  }
+}

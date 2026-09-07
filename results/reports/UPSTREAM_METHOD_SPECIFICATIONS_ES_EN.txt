@@ -1,0 +1,42 @@
+
+PORTABLE METHOD SPECIFICATIONS / ESPECIFICACIONES METODOLOGICAS PORTABLES
+
+STATUS / ESTATUS
+The analysis output contains byte-identical copies of the portable preprocessing, PSD/QC, spectral-input builder, and source-audit summary that were supplied to this run. Source-to-copy hashes are verified and recorded. The repository-level orchestrator, rather than this final statistical command alone, executes the complete upstream chain.
+
+La salida analitica contiene copias identicas de los scripts portables de preprocesamiento, PSD/QC, construccion espectral y del resumen de auditoria usados en esa ejecucion. Se verifican los hashes entre origen y copia. El orquestador del repositorio, no este comando estadistico aislado, ejecuta la cadena upstream completa.
+
+FILES / ARCHIVOS
+- scripts/03_preprocess_eeg.py — SHA-256 5912943eb13a49029dddf46787f8ebd74d6895d64489b4dde226b539498efe5d
+- scripts/04_compute_psd_qc.py — SHA-256 341d886ae5aebdd2dfac3a0d50b65f9a72a5361499041c3592edb50aed4b9a23
+- audit/metadata/source_audit_summary.json — SHA-256 a60218aa50267577054b9bd939d52a6cc73c32a2fdee2f66ec9784d18a6ff9df
+- scripts/06_build_analysis_inputs.py — SHA-256 3eb80767884558b89a6e99bc5f26aa06eeafe21b902c7e644572a6852634960c
+
+BAD-CHANNEL LOGIC / LOGICA DE CANALES MALOS
+- Robust scale per channel: robust_std = 1.4826 * median(abs(x - median(x))), with x in microvolts.
+- Scale outlier score: log_std = log10(max(robust_std, tiny)); robust_z = (log_std - median(log_std)) / max(1.4826 * median(abs(log_std - median(log_std))), eps).
+- Spatial-neighbor rule: channel coordinates come from the EEG montage; the six nearest channels by three-dimensional Euclidean distance are selected. After temporal decimation by five, each channel is correlated with the sample-wise median of those six neighbors. A channel is flagged only when correlation < 0.40 AND the across-channel robust correlation z score < -5.
+- Flat rule: robust_std < 0.1 microvolts. Scale rule: abs(robust_logstd_z) > 5.
+- MNE LOF is computed with n_neighbors=20 and threshold=2.0, but is advisory only and cannot by itself trigger interpolation.
+- Final bad channels are the union of flat, scale, and neighbor-rule flags. Those channels are interpolated with MNE mode='accurate' after ICA.
+
+ICA AND ICLABEL LOGIC / LOGICA ICA E ICLABEL
+- One joint EO+EC extended-Infomax ICA is fitted per participant after 50/100-Hz notch filtering, 1-100-Hz filtering, average reference, rank estimation, decimation=2, max_iter=1024, and an EEG rejection threshold of 500 microvolts.
+- ICLabel uses the ONNX backend. A component is excluded when its argmax label is muscle artifact, eye blink, heart beat, line noise, or channel noise AND its argmax probability is >= 0.80.
+- EOG z-score detections are retained as audit evidence and add an exclusion only when abs(EOG score) >= 0.50 AND ICLabel eye-blink probability >= 0.30.
+- The final excluded-component set is the union of high-confidence ICLabel artifacts and EOG-assisted exclusions.
+
+PSD AND FREQUENCY EDGES / PSD Y BORDES DE FRECUENCIA
+- EEG is analyzed at 250 Hz in 4-s windows advanced every 2 s (50% overlap), separately within each 60-s block; this yields 29 windows per block and a native FFT-bin spacing of 0.25 Hz.
+- SciPy periodogram uses a Hamming window, constant detrending, one-sided output, and scaling='density', yielding microvolt-squared/Hz.
+- Window acceptance is channel-specific and requires finite samples, max(abs(x)) <= 250 microvolts, peak-to-peak <= 500 microvolts, and robust_std >= 0.1 microvolts.
+- The initial QC feature script 04_compute_psd_qc.py stores window-level retention evidence and preliminary band summaries; it is not the direct constructor of the final cache.
+- The authoritative builder is scripts/06_build_analysis_inputs.py. It validates the 0.25-Hz FFT grid, trapezoid-integrates each contiguous 0.5-Hz interval, averages accepted-window linear density, and only then applies 10*log10. Canonical bands are additive sums of those interval integrals divided by band width. Shared endpoints carry zero area and are not double-counted.
+
+SOURCE AUDIT AND THREE EEG EXCLUSIONS / AUDITORIA DE FUENTE Y TRES EXCLUSIONES EEG
+- Source audit: download eligible=147; complete triplets=142; source-audit pass=136; source-audit fail=6; expected scalp EEG channels=61 plus VEOG.
+- Of the six source-audit failures, the preprocessing source marks three as recoverable without altering source EEG: sub-010020 and sub-010193 use normalized historical sidecar file references, and sub-010126 uses an explicit marker mapping for alternating S208 trains. Together with 136 direct passes, these yield 139 processable EEG records.
+- The preprocessing source freezes three exclusions: sub-010015 (truncated binary payload), sub-010078 (overlapping condition blocks), and sub-010100 (truncated binary payload). The usable mask additionally requires divisible payload and matching channel order. These are pseudonymous LEMON dataset IDs, retained verbatim so the 142 complete triplets to 139 processable EEG records transition can be audited without inference.
+
+PUBLICATION BOUNDARY / LIMITE DE PUBLICACION
+The exact preprocessing source contains those three pseudonymous dataset IDs. No raw EEG, questionnaire rows, or participant-level measurements are added by these source files. Nevertheless, repository release remains contingent on a human check of LEMON terms and institutional policy.

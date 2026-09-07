@@ -1,0 +1,8 @@
+# Python 3.12.3 environment used for the final statistical package.
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.13.0
+statsmodels==0.14.4
+patsy==1.0.1
+matplotlib==3.9.0
+mne==1.10.2

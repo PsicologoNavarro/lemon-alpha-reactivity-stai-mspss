@@ -1,0 +1,49 @@
+{
+  "study_title": "Exploratory associations of trait anxiety and perceived social support with posterior alpha reactivity during resting-state EEG",
+  "reference_run_date": "2026-09-05",
+  "inferential_unit": "participant",
+  "participant_flow": {
+    "eligible": 147,
+    "complete_brainvision_triplets": 142,
+    "processable_eeg": 139,
+    "complete_context_and_primary_analysis": 137,
+    "ica_converged_qc_cohort_before_model_complete_cases": 116,
+    "multiflag_qc_cohort_before_model_complete_cases": 111
+  },
+  "primary_alpha_models": {
+    "STAI_trait": {
+      "n": 137,
+      "wald_chi2_total_df3": 10.47169792,
+      "p_total_raw": 0.01495412061,
+      "p_total_holm_2": 0.01495412061,
+      "linear_component_db_per_sd": 0.4558617252,
+      "linear_component_ci95": [-0.04676697185, 0.9584904223],
+      "p_nonlinear_holm_2": 0.2863746211
+    },
+    "MSPSS_total": {
+      "n": 137,
+      "wald_chi2_total_df3": 14.89848936,
+      "p_total_raw": 0.001905483985,
+      "p_total_holm_2": 0.00381096797,
+      "linear_component_db_per_sd": -0.4327934308,
+      "linear_component_ci95": [-0.9422319983, 0.07664513671],
+      "p_nonlinear_holm_2": 0.2863746211
+    }
+  },
+  "four_band_holm8": {
+    "only_rejection": ["alpha", "MSPSS_total"],
+    "alpha_mspss_holm_p": 0.01524387188,
+    "alpha_stai_holm_p": 0.1046788443,
+    "all_nonalpha_total_tests_rejected": false,
+    "all_nonlinearity_tests_rejected": false
+  },
+  "archived_reference_artifact_sha256": {
+    "source_subject_audit_csv": "b4afe5852f6a3cfcb3752fe6e4375c81d71ef98e8278468d328f4082decca2e3",
+    "cohort_full62_frozen_csv": "b485a7062724995b9e97542b604c89f5289a5ea7a81f8d33482d978aff41163f",
+    "qc_master_csv": "3a06082b3fbc33fa03e1d61b4df5c92cccc55dc2a7461a669fb0df6c7f0736ed",
+    "canonical_npz": "0dddda113481e1e009141510ccd1b4cd00d834aa619fa2d93bfc18eeed7315f4",
+    "full_frequency_npz": "64655e6a540d3ae09225f8dfeed53657d96a2753483c911bcfc96b5313a05bf0",
+    "full_frequency_long_csv": "5886245cc559f9cf89e85136cef2aa83f20274b7aef0ad4204d1de348194c5cb"
+  },
+  "hash_note": "These hashes identify the archived Windows run. Fresh reproductions validate structure and numerical results because timestamps, paths, serialization and numerical libraries can change bytes without changing the analysis."
+}

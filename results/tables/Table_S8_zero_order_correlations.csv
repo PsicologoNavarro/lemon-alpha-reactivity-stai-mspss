@@ -1,0 +1,4 @@
+variable,stai_trait_total,mspss_total,alpha_roi_reactivity_ec_minus_eo_db
+stai_trait_total,1,-0.3722568225,0.2173112117
+mspss_total,-0.3722568225,1,-0.2167025045
+alpha_roi_reactivity_ec_minus_eo_db,0.2173112117,-0.2167025045,1

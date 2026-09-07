@@ -1,0 +1,51 @@
+{
+  "title": "Reproducible analysis of trait anxiety, perceived social support, and posterior alpha reactivity in LEMON",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "access_right": "open",
+  "license": "MIT",
+  "description": "End-to-end code and aggregate reference results for an exploratory participant-level analysis of posterior alpha reactivity in the public LEMON dataset. LEMON data are not redistributed.",
+  "creators": [
+    {
+      "name": "Navarro Nolasco, Diego Armando",
+      "affiliation": "Doctorado en Investigaciones Cerebrales, Universidad Veracruzana, Xalapa-Enríquez, Veracruz, Mexico",
+      "orcid": "0009-0006-1810-8206"
+    },
+    {
+      "name": "Beltrán-Parrazal, Luis",
+      "affiliation": "Instituto de Investigaciones Cerebrales, Universidad Veracruzana, Xalapa-Enríquez, Veracruz, Mexico",
+      "orcid": "0000-0002-4765-9051"
+    },
+    {
+      "name": "Martínez Chacón, Armando Jesús",
+      "affiliation": "Instituto de Neuroetología, Universidad Veracruzana, Xalapa-Enríquez, Veracruz, Mexico",
+      "orcid": "0000-0002-1248-2516"
+    },
+    {
+      "name": "López-Meraz, María Leonor",
+      "affiliation": "Instituto de Investigaciones Cerebrales, Universidad Veracruzana, Xalapa-Enríquez, Veracruz, Mexico",
+      "orcid": "0000-0003-0179-989X"
+    },
+    {
+      "name": "Morgado-Valle, Consuelo",
+      "affiliation": "Instituto de Investigaciones Cerebrales, Universidad Veracruzana, Xalapa-Enríquez, Veracruz, Mexico",
+      "orcid": "0000-0003-0158-7096"
+    }
+  ],
+  "keywords": [
+    "EEG",
+    "resting-state EEG",
+    "alpha reactivity",
+    "trait anxiety",
+    "perceived social support",
+    "LEMON",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1038/sdata.2018.308",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    }
+  ]
+}

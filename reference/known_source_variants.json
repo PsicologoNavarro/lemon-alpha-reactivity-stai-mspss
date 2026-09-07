@@ -1,0 +1,22 @@
+{
+  "description": "Public LEMON dataset IDs required to reproduce source normalization and exclusions; these are not local participant identifiers.",
+  "recoverable": {
+    "sub-010020": "Normalize historical BrainVision DataFile and MarkerFile sidecar references; EEG payload unchanged.",
+    "sub-010126": "Map alternating S208 marker trains to eyes_closed and S200 to eyes_open; source files unchanged.",
+    "sub-010193": "Normalize historical BrainVision DataFile and MarkerFile sidecar references; EEG payload unchanged."
+  },
+  "excluded": {
+    "sub-010015": "Truncated binary payload.",
+    "sub-010078": "Overlapping 60-second condition blocks.",
+    "sub-010100": "Truncated binary payload."
+  },
+  "expected_flow": {
+    "eligible": 147,
+    "complete_brainvision_triplets": 142,
+    "direct_source_audit_pass": 136,
+    "recoverable": 3,
+    "excluded": 3,
+    "processable_eeg": 139,
+    "complete_case_primary_models": 137
+  }
+}

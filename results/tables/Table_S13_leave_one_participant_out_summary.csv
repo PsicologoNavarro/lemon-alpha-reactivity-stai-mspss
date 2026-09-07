@@ -1,0 +1,3 @@
+outcome,n_leave_one_participant_out_refits,expected_linear_direction,direction_preserved_n,direction_preserved_percent,omnibus_holm_significant_n,omnibus_holm_significant_percent,linear_ci95_excludes_zero_n,linear_ci95_excludes_zero_percent,linear_component_min_db_per_sd,linear_component_max_db_per_sd,omnibus_holm_p_min,omnibus_holm_p_max,interpretation_boundary
+STAI_trait,137,positive,137,100,137,100,4,2.919708029,0.394411175,0.5356030697,0.008062266942,0.0340034896,Omnibus stability does not imply a significant linear coefficient in every refit.
+MSPSS_total,137,negative,137,100,137,100,2,1.459854015,-0.5121114522,-0.331717624,9.361572327e-07,0.03374086238,Omnibus stability does not imply a significant linear coefficient in every refit.

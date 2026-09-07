@@ -1,0 +1,20 @@
+
+LIBRARIES USED BY THE ALPHA-REACTIVITY STUDY
+
+- Python 3.12.3: runtime and standard library (argparse, pathlib, json, hashlib, datetime, platform, warnings).
+- NumPy 2.2.6: arrays, linear algebra, SVD, contrasts and validation.
+- pandas 2.3.3: participant tables, complete-case selection and CSV outputs.
+- SciPy 1.13.0: z scores, normal-reference inference helpers, distribution diagnostics and probability plots.
+- statsmodels 0.14.4: OLS, HC3 sandwich covariance, Wald tests, influence diagnostics, Breusch-Pagan tests, VIF and Holm adjustment.
+- patsy 1.0.1: natural cubic spline bases for the primary df=4 model and the df=3-6 complexity sensitivity.
+- matplotlib 3.9.0: 600-dpi PNG and vector PDF figures.
+- MNE-Python 1.10.2: standard 10-05 electrode coordinates and scalp topomap interpolation.
+
+Upstream EEG preprocessing reproducibility environment:
+- Python 3.12
+- MNE-Python 1.9.0
+- mne-icalabel 0.7.0
+- NumPy 2.2.6
+- SciPy 1.15.3
+
+The final analysis script does not rerun EEG preprocessing or PSD estimation. It validates and consumes the generated analysis inputs. The complete public workflow is implemented by scripts/01_download_lemon.py through scripts/07_run_analysis.py; scripts/06_build_analysis_inputs.py is the direct constructor of both the 1-45 Hz interval table and canonical-band cache.

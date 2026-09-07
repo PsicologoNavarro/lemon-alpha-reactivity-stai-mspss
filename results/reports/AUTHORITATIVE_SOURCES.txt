@@ -1,0 +1,8 @@
+
+LEMON source study (acquisition, recruitment, ethics): https://doi.org/10.1038/sdata.2018.308
+STROBE official EQUATOR page: https://www.equator-network.org/reporting-guidelines/strobe/
+COBIDAS-MEEG official site/checklists: https://cobidasmeeg.wordpress.com/
+SAMPL official EQUATOR page: https://www.equator-network.org/reporting-guidelines/sampl/
+Elsevier artwork and media instructions: https://www.elsevier.com/en-in/about/policies-and-standards/author/artwork-and-media-instructions
+
+Accessed by the analysis-package authoring workflow on 2026-09-05.
