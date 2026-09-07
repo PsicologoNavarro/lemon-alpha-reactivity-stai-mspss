@@ -12,9 +12,11 @@ This repository candidate was audited on 2026-09-07 under Python 3.12 on Windows
 - The active `CITATION.cff` validates against CFF schema 1.2.0. Its five authors, affiliations, and ORCID identifiers, and the matching `.zenodo.json` creators, were transcribed from the final submission manuscript. The source submission archive had SHA-256 `07CF6BF28F9B4E5B43C1C389EF30A859CD192E5049A1CF2EB02116AF02C0E5B3`; no manuscript file was copied into this public repository. Automated tests and the release auditor check author order and consistency.
 - The static repository audit found no raw EEG, FIF, NPZ, Parquet, participant-level table, archive, file above 50 MiB, local absolute path, local username, email outside live citation metadata, or secret-like string.
 - A manifest-driven temporary checkout with all 88 public files was initialized and staged in Git. The release-mode audit passed with metadata, privacy, tracked-file completeness, and SHA-256 integrity checks enabled.
+- Commit `1402ce8066e1152694e80a5c32b92ba8b969de0a` was published as GitHub tag and Release `v1.0.0`. Both the release audit and repository test workflows passed for the tag. Zenodo published version DOI `10.5281/zenodo.22647023` under concept DOI `10.5281/zenodo.22647022`.
+- The Zenodo snapshot was downloaded independently after publication. Its 7,729,686-byte ZIP matched Zenodo MD5 `0f97c286b8148b7694917769467435b5`; all 88 archived files were present and all 87 entries in the archived `SHA256SUMS` matched their file contents.
 
 ## Deliberate validation boundary
 
 The full 42.66-GiB raw-source audit and approximately 3.77-hour preprocessing stage were not rerun from a new clean download while assembling this public repository. Their executable specifications, expected source dispositions, archived aggregate provenance, dependency lock, and downstream numeric outputs are included. A fully independent replication must execute stages `01` through `07` from the official LEMON distribution as described in `REPRODUCIBILITY.md`.
 
-Release mode is expected to fail until the folder has a Git index containing every public file. Human approval of author metadata, code licensing, repository ownership, and publication of v1.0.0 remains required even though those approvals cannot be inferred or enforced by software.
+Release mode was exercised successfully against the staged Git index before publication. Future releases must repeat the metadata, privacy, test, and archive-verification gates.

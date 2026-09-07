@@ -1,5 +1,7 @@
 # Ansiedad rasgo, apoyo social y reactividad alfa posterior en LEMON
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22647022.svg)](https://doi.org/10.5281/zenodo.22647022)
+
 Repositorio reproducible y auditable para un análisis secundario exploratorio del EEG de reposo público LEMON. Incluye toda la cadena: descarga oficial, construcción de cohorte, auditoría BrainVision, preprocesamiento EO/EC de 61 canales, PSD, control de calidad, reactividad EC−EO, cuatro bandas canónicas, espectro 1–45 Hz, modelos estadísticos, tablas, informes y figuras de publicación.
 
 No contiene EEG LEMON ni mediciones individuales. Los resultados incluidos son agregados.
@@ -38,7 +40,7 @@ Todo dato o derivado individual queda en `workdir/`, fuera de Git. No fuerce su 
 
 ## Subida a GitHub y DOI Zenodo
 
-Los archivos activos [`CITATION.cff`](CITATION.cff) y [`.zenodo.json`](.zenodo.json), junto con sus copias completas `CITATION.cff.template` y `.zenodo.json.template`, contienen los autores, afiliaciones y ORCID en el orden informado en el manuscrito final de envío. Las pruebas automatizadas exigen que cada plantilla sea idéntica a su archivo activo. El destino público seleccionado es `PsicologoNavarro/lemon-alpha-reactivity-stai-mspss`. Antes del primer release, los autores deben revisar esos datos y confirmar la titularidad y autorización de la licencia MIT para el código original.
+Los archivos activos [`CITATION.cff`](CITATION.cff) y [`.zenodo.json`](.zenodo.json), junto con sus copias completas `CITATION.cff.template` y `.zenodo.json.template`, contienen los autores, afiliaciones y ORCID en el orden informado en el manuscrito final de envío. Las pruebas automatizadas exigen que cada plantilla sea idéntica a su archivo activo. El repositorio público es `PsicologoNavarro/lemon-alpha-reactivity-stai-mspss`.
 
 Siga [`docs/GITHUB_ZENODO_RELEASE.md`](docs/GITHUB_ZENODO_RELEASE.md). El orden correcto es:
 
@@ -48,7 +50,7 @@ Siga [`docs/GITHUB_ZENODO_RELEASE.md`](docs/GITHUB_ZENODO_RELEASE.md). El orden 
 4. publicar una GitHub Release, no solamente el tag;
 5. verificar la ingestión de Zenodo y descargar/comprobar su snapshot.
 
-Zenodo generará un DOI de versión y un DOI conceptual. Para la reproducibilidad del artículo debe citarse el DOI de la versión exacta.
+La release `v1.0.0` ya está archivada. Para reproducir la versión exacta del artículo debe citarse [`10.5281/zenodo.22647023`](https://doi.org/10.5281/zenodo.22647023). El DOI conceptual estable [`10.5281/zenodo.22647022`](https://doi.org/10.5281/zenodo.22647022) conduce a la versión archivada más reciente.
 
 ## Licencia
 

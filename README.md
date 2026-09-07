@@ -1,5 +1,7 @@
 # Trait anxiety, social support, and posterior alpha reactivity in LEMON
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22647022.svg)](https://doi.org/10.5281/zenodo.22647022)
+
 End-to-end, auditable code for an exploratory secondary analysis of the public MPI Leipzig Mind-Brain-Body (LEMON) resting-state EEG dataset. The workflow reconstructs the eligible cohort, audits the raw BrainVision sources, preprocesses 61-channel eyes-open/eyes-closed EEG, computes PSD and EC-minus-EO reactivity, freezes participant-level QC, and regenerates the statistical tables, reports, and publication figures.
 
 No LEMON data or participant-level measurements are distributed in this repository. Checked-in results are aggregate only.
@@ -60,12 +62,12 @@ The long participant-level table and all EEG derivatives are generated under `wo
 
 ## GitHub and Zenodo
 
-The live [`CITATION.cff`](CITATION.cff) and [`.zenodo.json`](.zenodo.json), together with their completed `.template` copies, contain the ordered authors, affiliations, and ORCID identifiers reported in the final submission manuscript. Automated tests require each template to remain byte-identical to its active counterpart. The selected public destination is `PsicologoNavarro/lemon-alpha-reactivity-stai-mspss`. Before the first public release, the authors must verify these records, confirm ownership and authorization of the MIT license for the original code, and follow [`docs/GITHUB_ZENODO_RELEASE.md`](docs/GITHUB_ZENODO_RELEASE.md).
+The live [`CITATION.cff`](CITATION.cff) and [`.zenodo.json`](.zenodo.json), together with their completed `.template` copies, contain the ordered authors, affiliations, and ORCID identifiers reported in the final submission manuscript. Automated tests require each template to remain byte-identical to its active counterpart. The public repository is `PsicologoNavarro/lemon-alpha-reactivity-stai-mspss`.
 
-Enable the public GitHub repository in Zenodo before publishing GitHub Release `v1.0.0`. Zenodo will then create a version DOI and a concept DOI. Cite the version DOI for the exact software release used by the manuscript.
+GitHub Release `v1.0.0` is archived in Zenodo. Cite the version DOI [`10.5281/zenodo.22647023`](https://doi.org/10.5281/zenodo.22647023) for the exact software used by the manuscript. The stable concept DOI [`10.5281/zenodo.22647022`](https://doi.org/10.5281/zenodo.22647022) resolves to the newest archived version. Release and verification procedures are documented in [`docs/GITHUB_ZENODO_RELEASE.md`](docs/GITHUB_ZENODO_RELEASE.md).
 
 ## License and citation
 
 Original repository code is released under the [MIT License](LICENSE). This does not relicense LEMON, STAI, MSPSS, or dependencies. Cite the LEMON source descriptor: Babayan et al. (2019), [doi:10.1038/sdata.2018.308](https://doi.org/10.1038/sdata.2018.308).
 
-Remaining human confirmations before v1.0.0 are listed in [`docs/HUMAN_METADATA_REQUIRED.md`](docs/HUMAN_METADATA_REQUIRED.md).
+Release metadata status and future additions are listed in [`docs/HUMAN_METADATA_REQUIRED.md`](docs/HUMAN_METADATA_REQUIRED.md).

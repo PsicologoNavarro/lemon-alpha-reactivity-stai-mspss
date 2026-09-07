@@ -72,6 +72,13 @@ Future GitHub Releases receive new version DOIs under the same concept. See [Zen
 
 Download Zenodo's archived snapshot, confirm that it corresponds to tag v1.0.0, and verify `SHA256SUMS`. Add the concept DOI badge and citation metadata after Zenodo creates the DOI; do not create an artificial release merely for that metadata-only update.
 
+The first release was verified on 2026-09-07:
+
+- version DOI: [`10.5281/zenodo.22647023`](https://doi.org/10.5281/zenodo.22647023);
+- concept DOI: [`10.5281/zenodo.22647022`](https://doi.org/10.5281/zenodo.22647022);
+- archived ZIP: 7,729,686 bytes, MD5 `0f97c286b8148b7694917769467435b5`;
+- archive audit: all 88 files were present and all 87 entries in `SHA256SUMS` matched.
+
 ## Large-file warning
 
 GitHub blocks ordinary Git objects above 100 MiB and warns above 50 MiB. This repository needs no Git LFS because all large data and derivatives are generated locally. LFS pointers may be archived instead of their target objects unless repository settings are changed, so adding LFS would make Zenodo verification harder. See [GitHub large-file limits](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github).
