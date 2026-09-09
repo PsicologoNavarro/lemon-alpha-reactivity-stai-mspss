@@ -41,15 +41,23 @@ def test_cff_and_zenodo_authors_match_submission_order() -> None:
     authors = verifier.cff_authors(citation)
     expected_names = [
         "Navarro Nolasco, Diego Armando",
-        "Beltrán-Parrazal, Luis",
+        "Olmos-Pastoresa, Carol Alejandra",
         "Martínez Chacón, Armando Jesús",
+        "Beltrán-Parrazal, Luis",
         "López-Meraz, María Leonor",
+        "García-García, Fabio",
         "Morgado-Valle, Consuelo",
     ]
     assert [f"{item['family-names']}, {item['given-names']}" for item in authors] == expected_names
     assert [item["name"] for item in metadata["creators"]] == expected_names
-    assert all(verifier.valid_orcid(item["orcid"]) for item in authors)
-    assert all(verifier.valid_orcid(item["orcid"]) for item in metadata["creators"])
+    assert "orcid" not in authors[1]
+    assert "orcid" not in metadata["creators"][1]
+    assert all(verifier.valid_orcid(item["orcid"]) for item in authors if "orcid" in item)
+    assert all(
+        verifier.valid_orcid(item["orcid"])
+        for item in metadata["creators"]
+        if "orcid" in item
+    )
 
 
 def test_completed_templates_match_active_metadata() -> None:

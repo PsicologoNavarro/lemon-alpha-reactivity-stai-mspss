@@ -1,6 +1,6 @@
 # GitHub and Zenodo release instructions
 
-The folder is ready for an initial GitHub upload after the static audit passes. Ordered author names, affiliations, and ORCID identifiers have been populated from the final submission manuscript, but the authors must verify and authorize the release.
+The repository contains an ordered creator list, affiliations, and every verified ORCID identifier. Creators must verify and authorize these metadata before each release; absence of an ORCID is valid when no identifier has been verified.
 
 ## 1. Verify human metadata
 

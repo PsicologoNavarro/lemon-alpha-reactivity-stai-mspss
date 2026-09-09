@@ -345,7 +345,7 @@ def audit(root: Path, release: bool) -> dict[str, object]:
             if not citation_authors:
                 errors.append("CITATION.cff authors must not be empty")
             for index, author in enumerate(citation_authors, start=1):
-                if not valid_orcid(author.get("orcid")):
+                if author.get("orcid") and not valid_orcid(author.get("orcid")):
                     errors.append(f"CITATION.cff author {index} has an invalid ORCID")
             if zenodo is not None:
                 for cff_key, zenodo_key in (("title", "title"), ("version", "version"), ("license", "license")):
@@ -376,7 +376,7 @@ def audit(root: Path, release: bool) -> dict[str, object]:
                             errors.append(f"author-affiliation mismatch at position {index}")
                         if normalize_orcid(creator.get("orcid")) != normalize_orcid(author.get("orcid")):
                             errors.append(f"author-ORCID mismatch at position {index}")
-                        if not valid_orcid(creator.get("orcid")):
+                        if creator.get("orcid") and not valid_orcid(creator.get("orcid")):
                             errors.append(f".zenodo.json creator {index} has an invalid ORCID")
 
     return {

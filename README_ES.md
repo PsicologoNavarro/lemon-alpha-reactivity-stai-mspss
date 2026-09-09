@@ -40,7 +40,7 @@ Todo dato o derivado individual queda en `workdir/`, fuera de Git. No fuerce su 
 
 ## Subida a GitHub y DOI Zenodo
 
-Los archivos activos [`CITATION.cff`](CITATION.cff) y [`.zenodo.json`](.zenodo.json), junto con sus copias completas `CITATION.cff.template` y `.zenodo.json.template`, contienen los autores, afiliaciones y ORCID en el orden informado en el manuscrito final de envío. Las pruebas automatizadas exigen que cada plantilla sea idéntica a su archivo activo. El repositorio público es `PsicologoNavarro/lemon-alpha-reactivity-stai-mspss`.
+Los archivos activos [`CITATION.cff`](CITATION.cff) y [`.zenodo.json`](.zenodo.json), junto con sus copias completas `CITATION.cff.template` y `.zenodo.json.template`, contienen la lista y las afiliaciones actuales de creadores en el orden de citación. Se incluyen ORCID verificados para seis creadores; Carol Alejandra Olmos-Pastoresa figura sin ORCID. Las pruebas automatizadas exigen que cada plantilla sea idéntica a su archivo activo. El repositorio público es `PsicologoNavarro/lemon-alpha-reactivity-stai-mspss`.
 
 Siga [`docs/GITHUB_ZENODO_RELEASE.md`](docs/GITHUB_ZENODO_RELEASE.md). El orden correcto es:
 

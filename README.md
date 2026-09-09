@@ -62,7 +62,7 @@ The long participant-level table and all EEG derivatives are generated under `wo
 
 ## GitHub and Zenodo
 
-The live [`CITATION.cff`](CITATION.cff) and [`.zenodo.json`](.zenodo.json), together with their completed `.template` copies, contain the ordered authors, affiliations, and ORCID identifiers reported in the final submission manuscript. Automated tests require each template to remain byte-identical to its active counterpart. The public repository is `PsicologoNavarro/lemon-alpha-reactivity-stai-mspss`.
+The live [`CITATION.cff`](CITATION.cff) and [`.zenodo.json`](.zenodo.json), together with their completed `.template` copies, contain the current ordered creator list and affiliations. Verified ORCID identifiers are provided for six creators; Carol Alejandra Olmos-Pastoresa is listed without an ORCID. Automated tests require each template to remain byte-identical to its active counterpart. The public repository is `PsicologoNavarro/lemon-alpha-reactivity-stai-mspss`.
 
 GitHub Release `v1.0.0` is archived in Zenodo. Cite the version DOI [`10.5281/zenodo.22647023`](https://doi.org/10.5281/zenodo.22647023) for the exact software used by the manuscript. The stable concept DOI [`10.5281/zenodo.22647022`](https://doi.org/10.5281/zenodo.22647022) resolves to the newest archived version. Release and verification procedures are documented in [`docs/GITHUB_ZENODO_RELEASE.md`](docs/GITHUB_ZENODO_RELEASE.md).
 
